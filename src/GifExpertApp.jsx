@@ -3,7 +3,7 @@ import { AddCategory, GifGrid } from './components';
 
 export const GifExpertApp = () => {
 
-	const [categories, setCategories] = useState(['One Punch']);
+	const [categories, setCategories] = useState([]);
 
 	const onAddCategory = ( newCategory ) => {
 		if( categories.includes(newCategory) ) return;
@@ -18,7 +18,6 @@ export const GifExpertApp = () => {
 				onNewCategory={ onAddCategory }
 			/>
 
-			<button onClick={ onAddCategory }>Agregar</button>
 			{ 
 				categories.map(category => (
 						<GifGrid 
